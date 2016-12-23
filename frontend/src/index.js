@@ -7,6 +7,10 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+// UI Imports
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 // App Imports
 import rootReducer from './reducers/root';
 import App from './app';
@@ -20,10 +24,14 @@ const store = createStore(
     )
 );
 
+injectTapEventPlugin();
+
 ReactDOM.render(
     <BrowserRouter>
         <Provider store={ store }>
-            <App />
+            <MuiThemeProvider>
+                <App />
+            </MuiThemeProvider>
         </Provider>
     </BrowserRouter>,
 

@@ -7,6 +7,8 @@ class About extends Component {
             <section>
                 <h2>About</h2>
 
+                <br/>
+
                 <p>Github Repo: <a href="https://github.com/atulmy/meteor-reactjs-zwitter">https://github.com/atulmy/meteor-reactjs-zwitter</a></p>
 
                 <p>Demo: <a href="http://meteor-reactjs-zwitter.demo.atulmy.com/">http://meteor-reactjs-zwitter.demo.atulmy.com</a></p>

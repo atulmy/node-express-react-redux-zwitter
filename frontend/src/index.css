@@ -1,4 +1,14 @@
 /* demo css */
-body {
-    padding: 15px;
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
 }

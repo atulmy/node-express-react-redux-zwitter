@@ -13,11 +13,13 @@ class Tweets extends Component {
 
     render() {
         return (
-            <div>
+            <section>
                 <h2>Tweets</h2>
 
+                <br/>
+
                 <TweetList tweets={ this.props.tweets } />
-            </div>
+            </section>
         );
     }
 }

@@ -2,6 +2,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// UI Imports
+import Snackbar from 'material-ui/Snackbar';
+import RaisedButton from 'material-ui/RaisedButton';
+import { blue500 } from 'material-ui/styles/colors';
+import TextField from 'material-ui/TextField';
+
 // App Imports
 import { postTweet } from '../actions/tweets';
 
@@ -13,7 +19,7 @@ class Tweet extends Component {
             text: '',
             isLoading: false,
             error: '',
-            message: ''
+            notification: false
         };
     }
 
@@ -29,10 +35,10 @@ class Tweet extends Component {
 
         if(input.text !=='') {
             this.props.postTweet(input).then((response) => {
-                this.setState({ isLoading: false, message: 'Tweet has been posted.', text: '', error: '' });
+                this.setState({ isLoading: false, notification: true, text: '', error: '' });
             });
         } else {
-            this.setState({ isLoading: false, error: 'Tweet cannot be empty.', message: '' });
+            this.setState({ isLoading: false, error: 'Tweet cannot be empty.', notification: false });
         }
     }
 
@@ -52,20 +58,26 @@ class Tweet extends Component {
                 { this.state.message ? <p className="alert alert-success">{ this.state.message }</p> : '' }
 
                 <form id="form-tweet" onSubmit={ this.onSubmit.bind(this) }>
-                    <div className="form-group">
-                        <textarea
-                            type="text"
-                            className="form-control"
-                            id="text"
-                            name="text"
-                            value={ this.state.text }
-                            placeholder="What's happening?"
-                            onChange={ this.onChange.bind(this) }
-                        />
-                    </div>
+                    <TextField
+                        name="text"
+                        value={ this.state.text }
+                        onChange={ this.onChange.bind(this) }
+                        floatingLabelText="What's happening?"
+                        multiLine={ true }
+                        rows={1}
+                        fullWidth={ true }
+                    />
 
-                    <button type="submit" className="btn btn-default">Submit</button>
+                    <br/>
+
+                    <RaisedButton label="Submit" type="submit" backgroundColor={ blue500 } labelColor="white" />
                 </form>
+
+                <Snackbar
+                    open={this.state.notification}
+                    message="Tweet has been posted"
+                    autoHideDuration={4000}
+                />
             </section>
         )
     }
