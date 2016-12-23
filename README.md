@@ -14,6 +14,33 @@ A basic clone of Twitter using - Node, Express, MongoDB, React and Redux Boilerp
 - Run API server `cd api` and `npm start` (runs on port 3001)
 - Run frontend server `cd frontend` and `npm start` (runs on port 3000, should automatically open `localhost:3000` in your browser)
 
+## Packages Used
+
+### API
+- **bcrypt** (Library to help you hash passwords)
+- **body-parser** (Parse incoming request bodies)
+- **cookie-parser** (Parse Cookie header)
+- **express** (Fast, unopinionated, minimalist web framework)
+- **jsonwebtoken** (JSON Web Token implementation)
+- **lodash** (Modular utilities)
+- **moment** (Parse, validate, manipulate, and display dates)
+- **mongoose** (MongoDB object modeling tool)
+
+### Frontend
+- **classnames** (A simple utility for conditionally joining classNames together)
+- **immutability-helper** (Mutate a copy of data without changing the original source)
+- **material-ui** (React Components that Implement Google's Material Design)
+- **moment** (Parse, validate, manipulate, and display dates)
+- **react** (Library for building user interfaces)
+- **react-addons-css-transition-group** (React CSSTransitionGroup add-on)
+- **react-dom** (React package for working with the DOM)
+- **react-redux** (Official React bindings for Redux)
+- **react-router** (v4, A complete routing library for React)
+- **react-tap-event-plugin** (Facebook's TapEventPlugin)
+- **redux** (Predictable state container for JavaScript apps)
+- **redux-devtools-extension** (Redux DevTools extension)
+- **redux-thunk** (Thunk middleware for Redux)
+
 ## Authors
 
 Atul Yadav - [GitHub](https://github.com/atulmy) &bull; [Twitter](https://twitter.com/atulmy)
