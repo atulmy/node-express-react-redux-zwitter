@@ -5,7 +5,6 @@ A basic clone of Twitter using - Node, Express, MongoDB, React and Redux Boilerp
 - List all tweets
 - Post a tweet
 - Login / Register (@todo)
-- Server Side Rendering (@todo)
 
 ## Running
 - Clone repo `git clone git@github.com:atulmy/node-express-react-redux-zwitter.git zwitter`
@@ -22,15 +21,15 @@ A basic clone of Twitter using - Node, Express, MongoDB, React and Redux Boilerp
 - **cookie-parser** (Parse Cookie header)
 - **express** (Fast, unopinionated, minimalist web framework)
 - **jsonwebtoken** (JSON Web Token implementation)
-- **lodash** (Modular utilities)
-- **moment** (Parse, validate, manipulate, and display dates)
+- lodash (Modular utilities)
+- moment (Parse, validate, manipulate, and display dates)
 - **mongoose** (MongoDB object modeling tool)
 
 ### Frontend
-- **classnames** (A simple utility for conditionally joining classNames together)
+- classnames (A simple utility for conditionally joining classNames together)
 - **immutability-helper** (Mutate a copy of data without changing the original source)
 - **material-ui** (React Components that Implement Google's Material Design)
-- **moment** (Parse, validate, manipulate, and display dates)
+- moment (Parse, validate, manipulate, and display dates)
 - **react** (Library for building user interfaces)
 - **react-addons-css-transition-group** (React CSSTransitionGroup add-on)
 - **react-dom** (React package for working with the DOM)
@@ -38,7 +37,7 @@ A basic clone of Twitter using - Node, Express, MongoDB, React and Redux Boilerp
 - **react-router** (v4, A complete routing library for React)
 - **react-tap-event-plugin** (Facebook's TapEventPlugin)
 - **redux** (Predictable state container for JavaScript apps)
-- **redux-devtools-extension** (Redux DevTools extension)
+- redux-devtools-extension (Redux DevTools extension)
 - **redux-thunk** (Thunk middleware for Redux)
 
 ## Authors
