@@ -22,11 +22,11 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: false
+            drawerOpen: false
         };
     }
 
-    handleDrawerToggle = () => this.setState({open: !this.state.open});
+    handleDrawerToggle = () => this.setState({ drawerOpen: !this.state.drawerOpen });
 
     render() {
         const { isAuthenticated } = this.props.user;
@@ -42,12 +42,11 @@ class App extends Component {
                 <Drawer
                     docked={false}
                     width={200}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}
+                    open={ this.state.drawerOpen }
+                    onRequestChange={(drawerOpen) => this.setState({ drawerOpen })}
                 >
-                    <Link to="/"><MenuItem onTouchTap={this.handleDrawerToggle}>Home</MenuItem></Link>
-                    <Link to="/about"><MenuItem onTouchTap={this.handleDrawerToggle}>About</MenuItem></Link>
-                    <Link to="/tweet"><MenuItem onTouchTap={this.handleDrawerToggle}>Tweet</MenuItem></Link>
+                    <MenuItem onTouchTap={this.handleDrawerToggle} containerElement={<Link to="/" />}>Home</MenuItem>
+                    <MenuItem onTouchTap={this.handleDrawerToggle} containerElement={<Link to="/about" />}>About</MenuItem>
                     <MenuItem>&copy; 2016 Zwitter</MenuItem>
                 </Drawer>
 

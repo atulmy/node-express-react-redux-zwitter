@@ -58,3 +58,13 @@ export function setCurrentUser(user) {
         user
     };
 }
+
+export function userLogout() {
+    return dispatch => {
+        localStorage.removeItem('token');
+
+        dispatch(setCurrentUser({}));
+
+        return { success: true };
+    }
+}

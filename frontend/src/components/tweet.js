@@ -1,6 +1,7 @@
 // Imports
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
 
 // UI Imports
 import Snackbar from 'material-ui/Snackbar';
@@ -10,6 +11,7 @@ import TextField from 'material-ui/TextField';
 
 // App Imports
 import { postTweet } from '../actions/tweets';
+import AuthRedirect from './user/auth-redirect';
 
 class Tweet extends Component {
     constructor(props) {
@@ -19,7 +21,8 @@ class Tweet extends Component {
             text: '',
             isLoading: false,
             error: '',
-            notification: false
+            notification: false,
+            viewTweet: false
         };
     }
 
@@ -77,7 +80,13 @@ class Tweet extends Component {
                     open={this.state.notification}
                     message="Tweet has been posted"
                     autoHideDuration={4000}
+                    action="View Tweet"
+                    onActionTouchTap={ () => ( this.setState({ viewTweet: true }) ) }
                 />
+
+                { this.state.viewTweet ? <Redirect to="/" /> : '' }
+
+                <AuthRedirect />
             </section>
         )
     }
