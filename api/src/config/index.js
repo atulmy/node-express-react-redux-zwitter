@@ -4,7 +4,7 @@
 const config = {
     port: 3001,
     secret: 'super-secret-key',
-    databaseUrl: 'mongodb://localhost/someha',
+    databaseUrl: 'mongodb://localhost/zwitter',
     saltRounds: 10
 };
 

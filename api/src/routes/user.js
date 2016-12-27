@@ -26,15 +26,13 @@ userRoutes.post('/user/login', authMiddleware, (request, response) => {
             if(error) {
                 responseData.errors.push({type: 'critical', message: error});
             } else {
-                console.log(document);
-
                 if(!document) {
                     responseData.errors.push({type: 'warning', message: 'No user exists with this username.'});
                 } else {
                     if(document.password != request.body.password) {
                         responseData.errors.push({type: 'critical', message: 'The password is incorrect.'});
                     } else {
-                        responseData.data.token = jwt.sign(document, config.secret);
+                        responseData.data.token = jwt.sign(document._doc, config.secret);
                         responseData.success = true;
                     }
                 }
