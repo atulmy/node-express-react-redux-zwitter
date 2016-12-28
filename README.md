@@ -4,7 +4,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 ## Features
 - List all tweets
 - Post a tweet
-- Login / Register (@todo)
+- Login / Register
 
 ## Running
 - Clone repo `git clone git@github.com:atulmy/node-express-react-redux-zwitter.git zwitter`
