@@ -40,6 +40,9 @@ A basic clone of Twitter using - Node, Express, MongoDB, React and Redux Boilerp
 - redux-devtools-extension (Redux DevTools extension)
 - **redux-thunk** (Thunk middleware for Redux)
 
+## Screenshots
+![screenshot](http://atulmy.com/attachments/images/node-express-react-redux-zwitter.png)
+
 ## Authors
 
 Atul Yadav - [GitHub](https://github.com/atulmy) &bull; [Twitter](https://twitter.com/atulmy)
