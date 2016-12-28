@@ -3,7 +3,9 @@
 
 // Imports
 const express = require('express');
+const isEmpty = require('lodash/isEmpty');
 
+// App Imports
 const config = require('./../config');
 let authMiddleware = require('./middlewares/auth');
 let Tweet = require('../models/tweet');
@@ -37,31 +39,37 @@ tweetRoutes.post('/tweet', authMiddleware, (request, response) => {
         errors: []
     };
 
-    if(request.body.text != '') {
-        let tweet = {
-            text: request.body.text,
-            userId: request.user._id,
-            createdAt: new Date()
-        };
+    if(!isEmpty(request.user)) {
+        if (request.body.text != '') {
+            let tweet = {
+                text: request.body.text,
+                userId: request.user._id,
+                createdAt: new Date()
+            };
 
-        Tweet.create(tweet, (error, document) => {
-            if(error) {
-                responseData.errors.push({type: 'critical', message: error});
-            } else {
-                let tweetId = document._id;
-
-                if(tweetId) {
-                    responseData.data.tweetId = tweetId;
-                    responseData.success = true;
+            Tweet.create(tweet, (error, document) => {
+                if (error) {
+                    responseData.errors.push({type: 'critical', message: error});
                 } else {
-                    responseData.errors.push({type: 'default', message: 'Please try again.'});
+                    let tweetId = document._id;
+
+                    if (tweetId) {
+                        responseData.data.tweetId = tweetId;
+                        responseData.success = true;
+                    } else {
+                        responseData.errors.push({type: 'default', message: 'Please try again.'});
+                    }
                 }
-            }
+
+                response.json(responseData);
+            });
+        } else {
+            responseData.errors.push({type: 'warning', message: 'Please enter tweet.'});
 
             response.json(responseData);
-        });
+        }
     } else {
-        responseData.errors.push({type: 'warning', message: 'Please enter tweet.'});
+        responseData.errors.push({type: 'critical', message: 'You are not signed in. Please sign in to post a tweet.'});
 
         response.json(responseData);
     }

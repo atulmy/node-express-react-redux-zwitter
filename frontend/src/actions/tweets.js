@@ -23,6 +23,9 @@ export function fetchTweets() {
 
 export function postTweet(tweet) {
     console.log(tweet);
+
+    const token = localStorage.getItem('token');
+
     return dispatch => {
         return fetch('/tweet', {
             method: 'post',
@@ -30,7 +33,8 @@ export function postTweet(tweet) {
             body: JSON.stringify(tweet),
 
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'x-access-token': token
             }
         })
             .then(response => response.json())

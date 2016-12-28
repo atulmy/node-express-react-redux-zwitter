@@ -12,10 +12,10 @@ let authMiddleware = function (request, response, next) {
 
     console.log('Auth Middleware', token);
 
-    if(token) {
+    if(token && token != 'null') {
         let decoded = jwt.verify(token, config.secret);
 
-        request.user = decoded._doc;
+        request.user = decoded;
 
         console.log(request.user);
     } else {

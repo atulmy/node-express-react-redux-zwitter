@@ -38,7 +38,11 @@ class Tweet extends Component {
 
         if(input.text !=='') {
             this.props.postTweet(input).then((response) => {
-                this.setState({ isLoading: false, notification: true, text: '', error: '' });
+                if(response.success) {
+                    this.setState({ isLoading: false, notification: true, text: '', error: '' });
+                } else {
+                    this.setState({ isLoading: false, error: response.errors[0].message });
+                }
             });
         } else {
             this.setState({ isLoading: false, error: 'Tweet cannot be empty.', notification: false });
@@ -56,9 +60,9 @@ class Tweet extends Component {
             <section>
                 <h2>Tweet to the world</h2>
 
-                { this.state.error ? <p className="alert alert-danger">{ this.state.error }</p> : '' }
+                { this.state.error ? <p>{ this.state.error }</p> : '' }
 
-                { this.state.message ? <p className="alert alert-success">{ this.state.message }</p> : '' }
+                { this.state.message ? <p>{ this.state.message }</p> : '' }
 
                 <form id="form-tweet" onSubmit={ this.onSubmit.bind(this) }>
                     <TextField
@@ -86,7 +90,7 @@ class Tweet extends Component {
 
                 { this.state.viewTweet ? <Redirect to="/" /> : '' }
 
-                <AuthRedirect />
+
             </section>
         )
     }
