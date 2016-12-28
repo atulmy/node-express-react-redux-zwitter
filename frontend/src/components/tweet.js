@@ -90,7 +90,7 @@ class Tweet extends Component {
 
                 { this.state.viewTweet ? <Redirect to="/" /> : '' }
 
-
+                <AuthRedirect />
             </section>
         )
     }
