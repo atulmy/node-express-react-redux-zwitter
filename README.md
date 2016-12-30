@@ -46,7 +46,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 
 ## Core Structure
     zwitter
-      ├── api
+      ├── api (localhost:3001)
       │   ├── src
       │   │   ├── config
       │   │   ├── models
@@ -57,7 +57,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
       │   ├── index.js
       │   └── package.json
       │
-      ├── frontend
+      ├── frontend (localhost:3000)
       │   ├── pubic
       │   │
       │   ├── src
