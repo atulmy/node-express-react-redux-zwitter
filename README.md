@@ -43,11 +43,47 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 ## Screenshots
 ![screenshot](http://atulmy.com/attachments/images/node-express-react-redux-zwitter.png)
 
+
+## Core Structure
+    zwitter
+      ├── api
+      │   ├── src
+      │   │   ├── config
+      │   │   ├── models
+      │   │   ├── routes
+      │   │   │   └── middlewares
+      │   │   └── server.js
+      │   │
+      │   ├── index.js
+      │   └── package.json
+      │
+      ├── frontend
+      │   ├── pubic
+      │   │
+      │   ├── src
+      │   │   ├── actions
+      │   │   ├── components
+      │   │   ├── reducers
+      │   │   ├── app.js
+      │   │   └── index.js
+      │   │
+      │   ├── components
+      │   │   ├── common
+      │   │   ├── pages
+      │   │   ├── user
+      │   │   └── app.js
+      │   │
+      │   ├── reducers
+      │   ├── index.js
+      │   └── routes.js
+      │
+      ├── .gitignore
+      └── README.md
+
 ## Authors
-
 Atul Yadav - [GitHub](https://github.com/atulmy) &bull; [Twitter](https://twitter.com/atulmy)
-## License
 
+## License
 Copyright (c) 2016 Atul Yadav http://github.com/atulmy
 
 The MIT License (http://www.opensource.org/licenses/mit-license.php)
