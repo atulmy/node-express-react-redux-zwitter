@@ -1,22 +1,11 @@
 {
-  "name": "someha",
-  "version": "1.0.0",
-  "description": "Social Media Handle Ads (SoMeHa)",
+  "name": "api",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/atulmy/social-media-handle.git"
-  },
-  "author": "Atul Yadav <atul.12788@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/atulmy/social-media-handle/issues"
-  },
-  "homepage": "https://github.com/atulmy/social-media-handle#readme",
   "dependencies": {
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
