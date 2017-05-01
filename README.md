@@ -51,7 +51,6 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
       │   │   ├── config
       │   │   ├── models
       │   │   ├── routes
-      │   │   │   └── middlewares
       │   │   └── server.js
       │   │
       │   ├── index.js
@@ -59,23 +58,12 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
       │
       ├── frontend (localhost:3000)
       │   ├── pubic
-      │   │
-      │   ├── src
-      │   │   ├── actions
-      │   │   ├── components
-      │   │   ├── reducers
-      │   │   ├── app.js
-      │   │   └── index.js
-      │   │
-      │   ├── components
-      │   │   ├── common
-      │   │   ├── pages
-      │   │   ├── user
-      │   │   └── app.js
-      │   │
-      │   ├── reducers
-      │   ├── index.js
-      │   └── routes.js
+      │   └── src
+      │       ├── actions
+      │       ├── components
+      │       ├── reducers
+      │       ├── app.js
+      │       └── index.js
       │
       ├── .gitignore
       └── README.md
