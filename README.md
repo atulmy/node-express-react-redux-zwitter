@@ -34,7 +34,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - **react-addons-css-transition-group** (React CSSTransitionGroup add-on)
 - **react-dom** (React package for working with the DOM)
 - **react-redux** (Official React bindings for Redux)
-- **react-router** (v4, A complete routing library for React)
+- **react-router-dom** (v4, A complete routing library for React)
 - **react-tap-event-plugin** (Facebook's TapEventPlugin)
 - **redux** (Predictable state container for JavaScript apps)
 - redux-devtools-extension (Redux DevTools extension)

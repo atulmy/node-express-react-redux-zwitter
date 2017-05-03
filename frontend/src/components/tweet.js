@@ -1,7 +1,7 @@
 // Imports
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 
 // UI Imports
 import Snackbar from 'material-ui/Snackbar';

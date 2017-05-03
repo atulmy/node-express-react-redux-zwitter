@@ -1,6 +1,6 @@
 // Imports
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class AuthRedirect extends Component {

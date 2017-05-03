@@ -1,7 +1,7 @@
 // Imports
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom'
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
@@ -38,13 +38,13 @@ injectTapEventPlugin();
 
 // Render App
 ReactDOM.render(
-    <BrowserRouter>
-        <Provider store={ store }>
-            <MuiThemeProvider>
+    <Provider store={ store }>
+        <MuiThemeProvider>
+            <Router>
                 <App />
-            </MuiThemeProvider>
-        </Provider>
-    </BrowserRouter>,
+            </Router>
+        </MuiThemeProvider>
+    </Provider>,
 
     document.getElementById('root')
 );
