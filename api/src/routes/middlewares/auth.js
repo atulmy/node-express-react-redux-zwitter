@@ -10,14 +10,8 @@ const config = require('../../config/index');
 let authMiddleware = function (request, response, next) {
     let token = request.body.token || request.query.token || request.headers['x-access-token'] || request.cookies.token;
 
-    console.log('Auth Middleware', token);
-
     if(token && token != 'null') {
-        let decoded = jwt.verify(token, config.secret);
-
-        request.user = decoded;
-
-        console.log(request.user);
+        request.user = jwt.verify(token, config.secret);
     } else {
         request.user = {};
     }

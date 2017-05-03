@@ -6,8 +6,9 @@ import { Redirect } from 'react-router-dom';
 // UI Imports
 import Snackbar from 'material-ui/Snackbar';
 import RaisedButton from 'material-ui/RaisedButton';
-import { blue500 } from 'material-ui/styles/colors';
+import { blue500, red500 } from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
+import { Card, CardText } from 'material-ui/Card';
 
 // App Imports
 import { postTweet } from '../actions/tweets';
@@ -60,9 +61,11 @@ class Tweet extends Component {
             <section>
                 <h2>Tweet to the world</h2>
 
-                { this.state.error ? <p>{ this.state.error }</p> : '' }
+                <br/>
 
-                { this.state.message ? <p>{ this.state.message }</p> : '' }
+                { this.state.error ? <Card><CardText color={ red500 }>{ this.state.error }</CardText></Card> : '' }
+
+                { this.state.message ? <Card><CardText color={ blue500 }>{ this.state.message }</CardText></Card> : '' }
 
                 <form id="form-tweet" onSubmit={ this.onSubmit.bind(this) }>
                     <TextField

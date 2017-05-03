@@ -7,8 +7,9 @@ import { Link, Redirect } from 'react-router-dom';
 import Snackbar from 'material-ui/Snackbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import { blue500 } from 'material-ui/styles/colors';
+import { blue500, red500 } from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
+import { Card, CardText } from 'material-ui/Card';
 
 // App Imports
 import { postLogin } from '../../actions/user';
@@ -40,7 +41,6 @@ class UserLogin extends Component {
 
         if(input.username !=='' && input.password !=='') {
             this.props.postLogin(input).then((response) => {
-
                 if(response.success) {
                     this.setState({
                         isLoading: false,
@@ -78,9 +78,11 @@ class UserLogin extends Component {
             <section>
                 <h2>Login</h2>
 
-                { this.state.error ? <p className="alert alert-danger">{ this.state.error }</p> : '' }
+                <br/>
 
-                { this.state.message ? <p className="alert alert-success">{ this.state.message }</p> : '' }
+                { this.state.error ? <Card><CardText color={ red500 }>{ this.state.error }</CardText></Card> : '' }
+
+                { this.state.message ? <Card><CardText color={ blue500 }>{ this.state.message }</CardText></Card> : '' }
 
                 <form id="form-tweet" onSubmit={ this.onSubmit.bind(this) }>
                     <TextField

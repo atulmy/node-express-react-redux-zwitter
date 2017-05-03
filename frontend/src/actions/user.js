@@ -24,11 +24,13 @@ export function postLogin(credentials) {
                 }
             })
             .then(response => {
-                const token = response.data.token;
+                if(response.success) {
+                    const token = response.data.token;
 
-                localStorage.setItem('token', token);
+                    localStorage.setItem('token', token);
 
-                dispatch(setCurrentUser(jwtDecode(token)));
+                    dispatch(setCurrentUser(jwtDecode(token)));
+                }
 
                 return response;
             });

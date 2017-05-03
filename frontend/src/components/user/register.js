@@ -1,14 +1,15 @@
 // Imports
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 // UI Imports
 import Snackbar from 'material-ui/Snackbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import { blue500 } from 'material-ui/styles/colors';
+import { blue500, red500 } from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
+import { Card, CardText } from 'material-ui/Card';
 
 // App Imports
 import { postRegister } from '../../actions/user';
@@ -22,7 +23,8 @@ class UserRegister extends Component {
             password: '',
             error: '',
             isLoading: false,
-            notification: false
+            notification: false,
+            registered: false
         };
     }
 
@@ -49,6 +51,11 @@ class UserRegister extends Component {
                         password: '',
                         error: ''
                     });
+
+                    // Redirect
+                    setTimeout(() => {
+                        this.setState({ registered: true });
+                    }, 1000)
                 } else {
                     this.setState({
                         isLoading: false,
@@ -73,9 +80,11 @@ class UserRegister extends Component {
             <section>
                 <h2>Register</h2>
 
-                { this.state.error ? <p className="alert alert-danger">{ this.state.error }</p> : '' }
+                <br/>
 
-                { this.state.message ? <p className="alert alert-success">{ this.state.message }</p> : '' }
+                { this.state.error ? <Card><CardText color={ red500 }>{ this.state.error }</CardText></Card> : '' }
+
+                { this.state.message ? <Card><CardText color={ blue500 }>{ this.state.message }</CardText></Card> : '' }
 
                 <form id="form-tweet" onSubmit={ this.onSubmit.bind(this) }>
                     <TextField
@@ -108,6 +117,8 @@ class UserRegister extends Component {
                     message="Registered successfully."
                     autoHideDuration={4000}
                 />
+
+                { this.state.registered ? <Redirect to="/user/login" /> : '' }
             </section>
         )
     }
