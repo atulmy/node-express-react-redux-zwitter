@@ -57,13 +57,15 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
       │   └── package.json
       │
       ├── frontend (localhost:3000)
-      │   ├── pubic
-      │   └── src
-      │       ├── actions
-      │       ├── components
-      │       ├── reducers
-      │       ├── app.js
-      │       └── index.js
+      │   ├── public
+      │   ├── src
+      │   │   ├── actions
+      │   │   ├── components
+      │   │   ├── reducers
+      │   │   ├── app.js
+      │   │   └── index.js
+      │   │
+      │   └── package.json
       │
       ├── .gitignore
       └── README.md
