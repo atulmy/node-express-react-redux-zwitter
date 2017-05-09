@@ -3,7 +3,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 
 ## Features
 - List all tweets
-- View single tweet (@todo)
+- View single tweet *(@todo)*
 - Post a tweet
 - Login / Register
 
