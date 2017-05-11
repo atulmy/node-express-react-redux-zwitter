@@ -11,10 +11,10 @@ import TextField from 'material-ui/TextField';
 import { Card, CardText } from 'material-ui/Card';
 
 // App Imports
-import { postTweet } from '../actions/tweets';
-import AuthRedirect from './user/auth-redirect';
+import { postTweet } from '../../actions/tweet';
+import AuthRedirect from './../user/auth-redirect';
 
-class Tweet extends Component {
+class TweetAdd extends Component {
     constructor(props) {
         super(props);
 
@@ -99,8 +99,8 @@ class Tweet extends Component {
     }
 }
 
-Tweet.propTypes = {
+TweetAdd.propTypes = {
     postTweet: React.PropTypes.func.isRequired
 };
 
-export default connect(null, { postTweet })(Tweet);
+export default connect(null, { postTweet })(TweetAdd);

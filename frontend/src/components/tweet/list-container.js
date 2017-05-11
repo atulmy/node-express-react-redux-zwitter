@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // App Imports
-import TweetList from './tweet-list';
-import { fetchTweets } from '../actions/tweets';
+import TweetList from './list';
+import { fetchTweets } from '../../actions/tweet';
 
-class Tweets extends Component {
+class TweetListContainer extends Component {
     componentDidMount() {
         this.props.fetchTweets();
     }
@@ -24,7 +24,7 @@ class Tweets extends Component {
     }
 }
 
-Tweets.propTypes = {
+TweetListContainer.propTypes = {
     tweets: React.PropTypes.array.isRequired,
     fetchTweets: React.PropTypes.func.isRequired
 };
@@ -35,4 +35,4 @@ function tweetsState(state) {
     }
 }
 
-export default connect(tweetsState, { fetchTweets })(Tweets);
+export default connect(tweetsState, { fetchTweets })(TweetListContainer);

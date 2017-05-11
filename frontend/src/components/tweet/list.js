@@ -1,11 +1,12 @@
 // Imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 // UI Imports
 import { Card, CardTitle } from 'material-ui/Card';
 
-export default function TweetList({ tweets }) {
+function TweetList({ tweets }) {
     const emptyMessage = (
         <p>No tweets to show.</p>
     );
@@ -13,7 +14,7 @@ export default function TweetList({ tweets }) {
     const tweetsList = (
         tweets.map(({ _id, text, createdAt }) => (
             <Card key={ _id }>
-                <CardTitle title={ text } subtitle={ moment(createdAt).fromNow() } />
+                <Link to={ `/tweet/${ _id }` }><CardTitle title={ text } subtitle={ moment(createdAt).fromNow() } /></Link>
             </Card>
         ))
     );
@@ -28,3 +29,5 @@ export default function TweetList({ tweets }) {
 TweetList.propTypes = {
     tweets: React.PropTypes.array.isRequired
 };
+
+export default TweetList;

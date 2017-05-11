@@ -10,9 +10,6 @@ const initialState = {
 };
 
 export default (state = initialState, action = {}) => {
-    console.log('reducer / user');
-    console.log(action);
-
     switch(action.type) {
         case USER_CURRENT_SET:
             return {

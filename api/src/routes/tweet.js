@@ -31,8 +31,8 @@ tweetRoutes.get('/tweets', authMiddleware, (request, response) => {
     });
 });
 
-// Tweet (/tweet)
-tweetRoutes.post('/tweet', authMiddleware, (request, response) => {
+// Tweet Add (/tweet/add)
+tweetRoutes.post('/tweet/add', authMiddleware, (request, response) => {
     let responseData = {
         success: false,
         data: {},
@@ -71,6 +71,28 @@ tweetRoutes.post('/tweet', authMiddleware, (request, response) => {
     } else {
         responseData.errors.push({type: 'critical', message: 'You are not signed in. Please sign in to post a tweet.'});
 
+        response.json(responseData);
+    }
+});
+
+// Single Tweets (/tweet/tweetId)
+tweetRoutes.get('/tweet/:tweetId', authMiddleware, (request, response) => {
+    let responseData = {
+        success: false,
+        data: {},
+        errors: []
+    };
+
+    if(request.params.tweetId) {
+        Tweet.find({ _id: request.params.tweetId }).exec(function (error, documents) {
+            if (documents && documents.length > 0) {
+                responseData.data = documents[0];
+                responseData.success = true;
+            }
+
+            response.json(responseData);
+        });
+    } else {
         response.json(responseData);
     }
 });
