@@ -2,10 +2,12 @@
 A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React and Redux using **create-react-app** with separate **API** `(express+mongo)` and **Frontend** `(react+redux)` folders. Uses Google's Material Design UI (`material-ui` package).
 
 ## Features
-- List all tweets
-- View single tweet *(@todo)*
-- Post a tweet
-- Login / Register
+- [x] List all tweets
+- [ ] View single tweet
+- [x] Post a tweet
+- [x] Login / Register
+- [ ] Demo on Digital Ocean
+- [ ] Short tutorial on Medium
 
 ## Running
 - Clone repo `git clone git@github.com:atulmy/node-express-react-redux-zwitter.git zwitter`
