@@ -46,7 +46,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - **redux-thunk** (Thunk middleware for Redux)
 
 ## Screenshots
-![screenshot](http://atulmy.com/attachments/images/node-express-react-redux-zwitter.png)
+![screenshot](http://atulmy.com/attachments/images/node-express-react-redux-zwitter.new.png)
 
 
 ## Core Structure
