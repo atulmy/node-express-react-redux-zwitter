@@ -15,8 +15,8 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - Clone repo `git clone git@github.com:atulmy/node-express-react-redux-zwitter.git zwitter`
 - Install NPM modules for **api** `cd api` and `npm install`
 - Install NPM modules for **frontend** `cd frontend` and `npm install`
-- Run **api** server `cd api` and `npm start` (runs on port 3001)
-- Run **frontend** server `cd frontend` and `npm start` (runs on port 3000, should automatically open `localhost:3000` in your browser)
+- Run **api** server `cd api` and `npm start` (runs on port configured under `api/src/config/index.js`)
+- Run **frontend** server `cd frontend` and `npm start` (runs on port 3000 or your `PORT` environment, should automatically open in your browser)
 
 ## Packages Used
 
