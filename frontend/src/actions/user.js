@@ -10,7 +10,7 @@ export function postLogin(credentials) {
     console.log(credentials);
 
     return dispatch => {
-        return fetch(`${ config.url.api }/user/login`, {
+        return fetch(`${ config.url.api }user/login`, {
             method: 'post',
 
             body: JSON.stringify(credentials),
@@ -42,7 +42,7 @@ export function postRegister(credentials) {
     console.log(credentials);
 
     return dispatch => {
-        return fetch(`${ config.url.api }/user/register`, {
+        return fetch(`${ config.url.api }user/register`, {
             method: 'post',
 
             body: JSON.stringify(credentials),
