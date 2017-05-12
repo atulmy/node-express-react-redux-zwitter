@@ -116,7 +116,7 @@ class UserLogin extends Component {
                     autoHideDuration={4000}
                 />
 
-                { this.state.logged ? <Redirect to="/tweet" /> : '' }
+                { this.state.logged ? <Redirect to="/tweet/add" /> : '' }
             </section>
         )
     }

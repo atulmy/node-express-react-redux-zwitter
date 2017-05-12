@@ -14,7 +14,7 @@ class TweetListContainer extends Component {
     render() {
         return (
             <section>
-                <h2>Tweets</h2>
+                <h2>💭 Tweets</h2>
 
                 <br/>
 

@@ -23,7 +23,8 @@ class TweetAdd extends Component {
             isLoading: false,
             error: '',
             notification: false,
-            viewTweet: false
+            viewTweet: false,
+            tweetId: ''
         };
     }
 
@@ -40,7 +41,7 @@ class TweetAdd extends Component {
         if(input.text !=='') {
             this.props.postTweet(input).then((response) => {
                 if(response.success) {
-                    this.setState({ isLoading: false, notification: true, text: '', error: '' });
+                    this.setState({ isLoading: false, notification: true, text: '', error: '', tweetId: response.data.tweetId });
                 } else {
                     this.setState({ isLoading: false, error: response.errors[0].message });
                 }
@@ -59,7 +60,7 @@ class TweetAdd extends Component {
     render() {
         return (
             <section>
-                <h2>Tweet to the world</h2>
+                <h2>💭 Tweet to the world</h2>
 
                 <br/>
 
@@ -79,19 +80,20 @@ class TweetAdd extends Component {
                     />
 
                     <br/>
+                    <br/>
 
-                    <RaisedButton label="Submit" type="submit" backgroundColor={ blue500 } labelColor="white" />
+                    <RaisedButton label="🐤 Submit" type="submit" backgroundColor={ blue500 } labelColor="white" />
                 </form>
 
                 <Snackbar
-                    open={this.state.notification}
+                    open={ this.state.notification }
                     message="Tweet has been posted"
                     autoHideDuration={4000}
                     action="View Tweet"
                     onActionTouchTap={ () => ( this.setState({ viewTweet: true }) ) }
                 />
 
-                { this.state.viewTweet ? <Redirect to="/" /> : '' }
+                { this.state.viewTweet ? <Redirect to={ `/tweet/${ this.state.tweetId }` } /> : '' }
 
                 <AuthRedirect />
             </section>

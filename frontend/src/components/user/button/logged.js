@@ -37,7 +37,7 @@ class UserButtonLogged extends Component {
                 targetOrigin={{horizontal: 'right', vertical: 'top'}}
                 anchorOrigin={{horizontal: 'right', vertical: 'top'}}
             >
-                <Link to="/tweet"><MenuItem primaryText="Tweet"/></Link>
+                <Link to="/tweet/add"><MenuItem primaryText="Tweet"/></Link>
                 <MenuItem primaryText="Sign out" onClick={ this.logout.bind(this) }/>
             </IconMenu>
         );

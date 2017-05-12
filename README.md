@@ -6,7 +6,8 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - [x] View single tweet
 - [x] Post a tweet
 - [x] Login / Register
-- [ ] Demo on Digital Ocean
+- [ ] Enable [CORS](https://enable-cors.org/index.html)
+- [ ] [Demo](http://node-express-react-redux-zwitter.demo.atulmy.com/) on Digital Ocean
 - [ ] Short tutorial on Medium
 
 ## Running

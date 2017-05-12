@@ -39,9 +39,9 @@ class Layout extends Component {
                     open={ this.state.drawerOpen }
                     onRequestChange={(drawerOpen) => this.setState({ drawerOpen })}
                 >
-                    <MenuItem onTouchTap={this.handleDrawerToggle} containerElement={<Link to="/" />}>Home</MenuItem>
-                    <MenuItem onTouchTap={this.handleDrawerToggle} containerElement={<Link to="/about" />}>About</MenuItem>
-                    <MenuItem>&copy; 2016 Zwitter</MenuItem>
+                    <MenuItem onTouchTap={ this.handleDrawerToggle } containerElement={<Link to="/" />}>🏠 Home</MenuItem>
+                    <MenuItem onTouchTap={ this.handleDrawerToggle } containerElement={<Link to="/about" />}>ℹ️ About</MenuItem>
+                    <MenuItem onTouchTap={ this.handleDrawerToggle }>👨‍💻 Zwitter by <a href="https://twitter.com/atulmy" target="_blank">@atulmy</a></MenuItem>
                 </Drawer>
 
                 { this.props.children }

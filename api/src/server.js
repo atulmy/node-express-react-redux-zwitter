@@ -28,6 +28,13 @@ apiServer.use(bodyParser.json());
 // Cookie Parser
 apiServer.use(cookieParser());
 
+// Enable CORS
+apiServer.use(function(request, response, next) {
+    request.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 // Routes
 apiServer.use(commonRoutes);
 apiServer.use(userRoutes);

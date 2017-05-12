@@ -1,9 +1,12 @@
+// App Imports
+import config from '../config';
+
 export const SET_TWEETS = 'SET_TWEETS';
 export const SET_TWEET = 'SET_TWEET';
 
 export function fetchTweets() {
     return dispatch => {
-        return fetch('/tweets').then(function(response) {
+        return fetch(`${ config.url.api }tweets`).then(function(response) {
             if (response.ok) {
                 response.json().then(function(response) {
                     if(response.data.length > 0) {
@@ -23,11 +26,8 @@ export function fetchTweets() {
 }
 
 export function fetchTweet(tweetId) {
-    console.log('fetchTweet');
-    console.log(tweetId);
-
     return dispatch => {
-        return fetch(`/tweet/${ tweetId }`).then(function(response) {
+        return fetch(`${ config.url.api }tweet/${ tweetId }`).then(function(response) {
             if (response.ok) {
                 response.json().then(function(response) {
                     if(response.success) {
@@ -47,12 +47,10 @@ export function fetchTweet(tweetId) {
 }
 
 export function postTweet(tweet) {
-    console.log(tweet);
-
     const token = localStorage.getItem('token');
 
     return dispatch => {
-        return fetch('/tweet/add', {
+        return fetch(`${ config.url.api }tweet/add`, {
             method: 'post',
 
             body: JSON.stringify(tweet),

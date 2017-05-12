@@ -1,7 +1,8 @@
 // Imports
 import jwtDecode from 'jwt-decode';
 
-export const SET_TWEETS = 'SET_TWEETS';
+// App Imports
+import config from '../config';
 
 export const USER_CURRENT_SET = 'USER_CURRENT_SET';
 
@@ -9,7 +10,7 @@ export function postLogin(credentials) {
     console.log(credentials);
 
     return dispatch => {
-        return fetch('/user/login', {
+        return fetch(`${ config.url.api }/user/login`, {
             method: 'post',
 
             body: JSON.stringify(credentials),
@@ -41,7 +42,7 @@ export function postRegister(credentials) {
     console.log(credentials);
 
     return dispatch => {
-        return fetch('/user/register', {
+        return fetch(`${ config.url.api }/user/register`, {
             method: 'post',
 
             body: JSON.stringify(credentials),

@@ -16,7 +16,7 @@ const App  = () => (
     <Layout>
         <Switch>
             <Route exact path="/" component={ TweetListContainer } />
-            <Route path="/tweet/create" component={ TweetAdd } />
+            <Route path="/tweet/add" component={ TweetAdd } />
             <Route path="/tweet/:tweetId" component={ TweetViewContainer } />
             <Route path="/user/login" component={ UserLogin } />
             <Route path="/user/register" component={ UserRegister } />
