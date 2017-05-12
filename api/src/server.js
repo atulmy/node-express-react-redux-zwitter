@@ -4,6 +4,7 @@
 // Imports
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
@@ -21,19 +22,15 @@ mongoose.connect(config.databaseUrl);
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
+// Enable CORS
+apiServer.use(cors());
+
 // Body Parser
 apiServer.use(bodyParser.urlencoded({ extended: false }));
 apiServer.use(bodyParser.json());
 
 // Cookie Parser
 apiServer.use(cookieParser());
-
-// Enable CORS
-apiServer.use(function(request, response, next) {
-    request.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
 
 // Routes
 apiServer.use(commonRoutes);
