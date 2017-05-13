@@ -56,9 +56,9 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
       │   │   ├── config
       │   │   ├── models
       │   │   ├── routes
-      │   │   └── server.js
+      │   │   ├── server.js
+      │   │   └── index.js
       │   │
-      │   ├── index.js
       │   └── package.json
       │
       ├── frontend (localhost:3000)
