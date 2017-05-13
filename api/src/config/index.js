@@ -2,7 +2,7 @@
 'use strict';
 
 const config = {
-    port: 4001,
+    port: 5001,
     secret: 'super-secret-key',
     databaseUrl: 'mongodb://localhost/zwitter',
     saltRounds: 10
