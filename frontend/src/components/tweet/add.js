@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // UI Imports
 import Snackbar from 'material-ui/Snackbar';
@@ -102,7 +103,7 @@ class TweetAdd extends Component {
 }
 
 TweetAdd.propTypes = {
-    postTweet: React.PropTypes.func.isRequired
+    postTweet: PropTypes.func.isRequired
 };
 
 export default connect(null, { postTweet })(TweetAdd);

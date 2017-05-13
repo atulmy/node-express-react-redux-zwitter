@@ -1,6 +1,7 @@
 // Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 // UI Imports
@@ -27,7 +28,7 @@ function TweetList({ tweets }) {
 }
 
 TweetList.propTypes = {
-    tweets: React.PropTypes.array.isRequired
+    tweets: PropTypes.array.isRequired
 };
 
 export default TweetList;

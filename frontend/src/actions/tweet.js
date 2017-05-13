@@ -2,10 +2,16 @@
 import config from '../config';
 
 export const SET_TWEETS = 'SET_TWEETS';
+export const FETCH_TWEETS_BEGIN = 'FETCH_TWEETS_BEGIN';
 export const SET_TWEET = 'SET_TWEET';
+export const FETCH_TWEET_BEGIN = 'FETCH_TWEET_BEGIN';
 
 export function fetchTweets() {
     return dispatch => {
+        dispatch({
+            type: FETCH_TWEETS_BEGIN
+        });
+
         return fetch(`${ config.url.api }tweets`).then(function(response) {
             if (response.ok) {
                 response.json().then(function(response) {
@@ -27,6 +33,10 @@ export function fetchTweets() {
 
 export function fetchTweet(tweetId) {
     return dispatch => {
+        dispatch({
+            type: FETCH_TWEET_BEGIN
+        });
+
         return fetch(`${ config.url.api }tweet/${ tweetId }`).then(function(response) {
             if (response.ok) {
                 response.json().then(function(response) {

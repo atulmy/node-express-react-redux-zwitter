@@ -1,10 +1,12 @@
 // Imports
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // App Imports
-import TweetView from './view';
 import { fetchTweet } from '../../actions/tweet';
+import Loading from '../loading';
+import TweetView from './view';
 
 class TweetViewContainer extends Component {
     componentDidMount() {
@@ -18,15 +20,15 @@ class TweetViewContainer extends Component {
 
                 <br/>
 
-                <TweetView tweet={ this.props.tweet } />
+                { this.props.tweet.loading ? <Loading /> : <TweetView tweet={ this.props.tweet.details } /> }
             </section>
         );
     }
 }
 
 TweetViewContainer.propTypes = {
-    tweet: React.PropTypes.object.isRequired,
-    fetchTweet: React.PropTypes.func.isRequired
+    tweet: PropTypes.object.isRequired,
+    fetchTweet: PropTypes.func.isRequired
 };
 
 function tweetState(state) {

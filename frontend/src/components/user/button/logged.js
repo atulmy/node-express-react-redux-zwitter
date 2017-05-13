@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // UI Imports
 import MenuItem from 'material-ui/MenuItem';
@@ -45,7 +46,7 @@ class UserButtonLogged extends Component {
 }
 
 UserButtonLogged.propTypes = {
-    userLogout: React.PropTypes.func.isRequired,
+    userLogout: PropTypes.func.isRequired,
 };
 
 export default connect(null, { userLogout })(UserButtonLogged);

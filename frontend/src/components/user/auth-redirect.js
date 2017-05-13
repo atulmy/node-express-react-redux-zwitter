@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class AuthRedirect extends Component {
     render() {
@@ -16,7 +17,7 @@ class AuthRedirect extends Component {
 }
 
 AuthRedirect.propTypes = {
-    user: React.PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {

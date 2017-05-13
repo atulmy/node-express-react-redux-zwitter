@@ -7,8 +7,6 @@ import config from '../config';
 export const USER_CURRENT_SET = 'USER_CURRENT_SET';
 
 export function postLogin(credentials) {
-    console.log(credentials);
-
     return dispatch => {
         return fetch(`${ config.url.api }user/login`, {
             method: 'post',
@@ -39,8 +37,6 @@ export function postLogin(credentials) {
 }
 
 export function postRegister(credentials) {
-    console.log(credentials);
-
     return dispatch => {
         return fetch(`${ config.url.api }user/register`, {
             method: 'post',

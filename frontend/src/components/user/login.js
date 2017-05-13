@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // UI Imports
 import Snackbar from 'material-ui/Snackbar';
@@ -23,6 +24,7 @@ class UserLogin extends Component {
             password: '',
             error: '',
             isLoading: false,
+            isLoggingIn: false,
             notification: false,
             logged: false
         };
@@ -33,17 +35,18 @@ class UserLogin extends Component {
 
         console.log('E - submit #form-tweet');
 
-        this.setState({ isLoading: true });
-
         let input = {};
         input.username = this.state.username;
         input.password = this.state.password;
 
         if(input.username !=='' && input.password !=='') {
+            this.setState({ isLoggingIn: true, isLoading: true});
+
             this.props.postLogin(input).then((response) => {
                 if(response.success) {
                     this.setState({
                         isLoading: false,
+                        isLoggingIn: false,
                         notification: true,
                         username: '',
                         password: '',
@@ -57,13 +60,17 @@ class UserLogin extends Component {
                 } else {
                     this.setState({
                         isLoading: false,
+                        isLoggingIn: false,
                         error: response.errors[0].message,
                         notification: false
                     });
                 }
             });
         } else {
-            this.setState({ isLoading: false, error: 'Please enter your username and password.', notification: false });
+            this.setState({
+                error: 'Please enter your username and password.',
+                notification: false
+            });
         }
     }
 
@@ -111,9 +118,15 @@ class UserLogin extends Component {
                 </form>
 
                 <Snackbar
-                    open={this.state.notification}
+                    open={ this.state.isLoggingIn }
+                    message="Logging in..."
+                    autoHideDuration={ 1000 }
+                />
+
+                <Snackbar
+                    open={ this.state.notification }
                     message="Login successful, redirecting..."
-                    autoHideDuration={4000}
+                    autoHideDuration={ 2000 }
                 />
 
                 { this.state.logged ? <Redirect to="/tweet/add" /> : '' }
@@ -123,11 +136,11 @@ class UserLogin extends Component {
 }
 
 UserLogin.propTypes = {
-    postLogin: React.PropTypes.func.isRequired
+    postLogin: PropTypes.func.isRequired
 };
 
 UserLogin.contextTypes = {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
 };
 
 export default connect(null, { postLogin })(UserLogin);

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // UI Imports
 import AppBar from 'material-ui/AppBar';
@@ -51,7 +52,7 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-    user: React.PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {

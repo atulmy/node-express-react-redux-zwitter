@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // UI Imports
 import Snackbar from 'material-ui/Snackbar';
@@ -23,6 +24,7 @@ class UserRegister extends Component {
             password: '',
             error: '',
             isLoading: false,
+            isLoggingIn: false,
             notification: false,
             registered: false
         };
@@ -33,19 +35,20 @@ class UserRegister extends Component {
 
         console.log('E - submit #form-tweet');
 
-        this.setState({ isLoading: true });
-
         let input = {};
         input.username = this.state.username;
         input.password = this.state.password;
 
         if(input.username !=='' && input.password !=='') {
+            this.setState({ isLoggingIn: true, isLoading: true });
+
             this.props.postRegister(input).then((response) => {
                 console.log(response);
 
                 if(response.success) {
                     this.setState({
                         isLoading: false,
+                        isLoggingIn: false,
                         notification: true,
                         username: '',
                         password: '',
@@ -59,13 +62,17 @@ class UserRegister extends Component {
                 } else {
                     this.setState({
                         isLoading: false,
+                        isLoggingIn: false,
                         error: response.errors[0].message,
                         notification: false
                     });
                 }
             });
         } else {
-            this.setState({ isLoading: false, error: 'Please enter your username and password.', notification: false });
+            this.setState({
+                error: 'Please enter your username and password.',
+                notification: false
+            });
         }
     }
 
@@ -113,6 +120,12 @@ class UserRegister extends Component {
                 </form>
 
                 <Snackbar
+                    open={ this.state.isLoggingIn }
+                    message="Logging in..."
+                    autoHideDuration={ 1000 }
+                />
+
+                <Snackbar
                     open={ this.state.notification }
                     message="Registered successfully."
                     autoHideDuration={4000}
@@ -125,7 +138,7 @@ class UserRegister extends Component {
 }
 
 UserRegister.propTypes = {
-    postRegister: React.PropTypes.func.isRequired
+    postRegister: PropTypes.func.isRequired
 };
 
 export default connect(null, { postRegister })(UserRegister);

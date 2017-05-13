@@ -1,10 +1,12 @@
 // Imports
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // App Imports
-import TweetList from './list';
 import { fetchTweets } from '../../actions/tweet';
+import Loading from '../loading';
+import TweetList from './list';
 
 class TweetListContainer extends Component {
     componentDidMount() {
@@ -18,18 +20,20 @@ class TweetListContainer extends Component {
 
                 <br/>
 
-                <TweetList tweets={ this.props.tweets } />
+                { this.props.tweets.loading ? <Loading /> : <TweetList tweets={ this.props.tweets.list } /> }
             </section>
         );
     }
 }
 
 TweetListContainer.propTypes = {
-    tweets: React.PropTypes.array.isRequired,
-    fetchTweets: React.PropTypes.func.isRequired
+    tweets: PropTypes.object.isRequired,
+    fetchTweets: PropTypes.func.isRequired
 };
 
 function tweetsState(state) {
+    console.log(state.tweets);
+
     return {
         tweets: state.tweets
     }
