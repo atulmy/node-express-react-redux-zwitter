@@ -3,8 +3,8 @@
 // Imports
 const express = require('express');
 
-const config = require('./src/config');
-let appServer = require('./src/server');
+const config = require('./config');
+let appServer = require('./server');
 
 // Boot Server
 const port = process.env.PORT || config.port;
