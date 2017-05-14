@@ -5,7 +5,7 @@ import React from 'react'
 import CircularProgress from 'material-ui/CircularProgress';
 
 const Layout = () => (
-    <p><CircularProgress /></p>
+    <CircularProgress />
 );
 
 export default Layout

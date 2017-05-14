@@ -43,8 +43,6 @@ class UserRegister extends Component {
             this.setState({ isLoggingIn: true, isLoading: true });
 
             this.props.postRegister(input).then((response) => {
-                console.log(response);
-
                 if(response.success) {
                     this.setState({
                         isLoading: false,

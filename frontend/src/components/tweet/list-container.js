@@ -32,8 +32,6 @@ TweetListContainer.propTypes = {
 };
 
 function tweetsState(state) {
-    console.log(state.tweets);
-
     return {
         tweets: state.tweets
     }
