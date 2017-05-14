@@ -46,22 +46,22 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - **redux-thunk** (Thunk middleware for Redux)
 
 ## Screenshots
-![screenshot](http://atulmy.com/attachments/images/node-express-react-redux-zwitter.new.png)
+![screenshot](http://atulmy.com/attachments/images/node-express-react-redux-zwitter.v1.png)
 
 
 ## Core Structure
     zwitter
-      ├── api (localhost:3001)
+      ├── api (api.example.com)
       │   ├── src
       │   │   ├── config
       │   │   ├── models
       │   │   ├── routes
-      │   │   └── server.js
+      │   │   ├── server.js
+      │   │   └── index.js
       │   │
-      │   ├── index.js
       │   └── package.json
       │
-      ├── frontend (localhost:3000)
+      ├── frontend (example.com)
       │   ├── public
       │   ├── src
       │   │   ├── actions
