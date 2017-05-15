@@ -14,6 +14,7 @@ import { Card, CardText } from 'material-ui/Card';
 // App Imports
 import { postTweet } from '../../actions/tweet';
 import AuthRedirect from './../user/auth-redirect';
+import Loading from '../loading';
 
 class TweetAdd extends Component {
     constructor(props) {
@@ -83,7 +84,7 @@ class TweetAdd extends Component {
                     <br/>
                     <br/>
 
-                    <RaisedButton label="🐤 Submit" type="submit" backgroundColor={ blue500 } labelColor="white" />
+                    { this.state.isLoading ? <Loading /> : <RaisedButton label="🐤 Submit" type="submit" backgroundColor={ blue500 } labelColor="white" /> }
                 </form>
 
                 <Snackbar
