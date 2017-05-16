@@ -75,6 +75,17 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
       ├── .gitignore
       └── README.md
 
+## Resources
+- [What is React.js and Why I recommend it to other JavaScript Developers?](https://www.linkedin.com/pulse/what-reactjs-why-i-recommend-other-javascript-sandip-das) (LinkedIn post)
+- [Container Components](https://medium.com/@learnreact/container-components-c0e67432e005) (Medium article)
+- [Thinking in Redux (when all you’ve known is MVC)](https://hackernoon.com/thinking-in-redux-when-all-youve-known-is-mvc-c78a74d35133) (Medium article)
+- [CRUD with Redux](https://www.youtube.com/playlist?list=PLuNEz8XtB51KfnHc99GwscPy1UbLJyXHW) (Youtube playlist)
+- [React Router v4](https://www.youtube.com/watch?v=UVQ0ATR0vpI&list=PLkuiMQfg5DujODRnZGKokmwHZrBqqUCr1&index=14) (Youtube video)
+- [React Component Patterns by Michael ](https://www.youtube.com/watch?v=YaZg8wg39QQ&list=PLkuiMQfg5DujODRnZGKokmwHZrBqqUCr1&index=13) (Youtube video)
+- [Universal JavaScript Web Applications with React - Luciano Mammino](https://www.youtube.com/watch?v=0VEwRFP8WtI&list=PLkuiMQfg5DujODRnZGKokmwHZrBqqUCr1&index=15&t=9s) (Advance topic, Youtube video)
+- [Break Down Isomorphic and Universal Boilerplate: React-Redux server rendering](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285) (Advance topic, Medium article)
+- [Collection of bunch of interesting React videos and related topic](https://www.youtube.com/playlist?list=PLkuiMQfg5DujODRnZGKokmwHZrBqqUCr1) (Youtube playlist)
+
 ## Authors
 Atul Yadav - [GitHub](https://github.com/atulmy) &bull; [Twitter](https://twitter.com/atulmy)
 
