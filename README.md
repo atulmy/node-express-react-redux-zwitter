@@ -1,7 +1,7 @@
-# Node Express/MongoDB + React/Redux App - Zwitter
-A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React and Redux using **create-react-app** with separate **API** `(express+mongo)` and **Frontend** `(react+redux)` folders. Uses Google's Material Design UI (`material-ui` package). <a href="https://node-express-react-redux-zwitter.demo.atulmy.com/" target="_blank">Demo ↗️</a>
+# 🐣 Node Express/MongoDB + React/Redux App - Zwitter
+A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React and Redux using **create-react-app** with separate **API** `(express+mongo)` and **Frontend** `(react+redux)` folders. Uses Google's Material Design UI (`material-ui` package). [DEMO 🐣](https://node-express-react-redux-zwitter.demo.atulmy.com/)
 
-## Features
+## 📝 Features
 - [x] List all tweets
 - [x] View single tweet
 - [x] Post a tweet
@@ -11,14 +11,14 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - [x] Progressive Web App features (Offline first, Service worker, Application shell) using [sw-precache](https://github.com/GoogleChrome/sw-precache) and [create-react-pwa](https://github.com/jeffposnick/create-react-pwa)
 - [ ] Short tutorial on Medium
 
-## Running
+## ▶️ Running
 - Clone repo `git clone git@github.com:atulmy/node-express-react-redux-zwitter.git zwitter`
 - Install NPM modules for **api** `cd api` and `npm install`
 - Install NPM modules for **frontend** `cd frontend` and `npm install`
 - Run **api** server `cd api` and `npm start` (runs on port configured under `api/src/config/index.js`)
 - Run **frontend** server `cd frontend` and `npm start` (runs on port 3000 or your `PORT` environment, should automatically open in your browser)
 
-## Packages Used
+## 📦 Packages Used
 
 ### API
 - **bcrypt** (Library to help you hash passwords)
@@ -45,11 +45,10 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - redux-devtools-extension (Redux DevTools extension)
 - **redux-thunk** (Thunk middleware for Redux)
 
-## Screenshots
+## 📸 Screenshots
 ![screenshot](http://atulmy.com/attachments/images/node-express-react-redux-zwitter.v1.png)
 
-
-## Core Structure
+## 🏗 Core Structure
     zwitter
       ├── api (api.example.com)
       │   ├── src
@@ -75,7 +74,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
       ├── .gitignore
       └── README.md
 
-## Resources
+## ⭐️ Resources
 - [What is React.js and Why I recommend it to other JavaScript Developers?](https://www.linkedin.com/pulse/what-reactjs-why-i-recommend-other-javascript-sandip-das) (LinkedIn post)
 - [Container Components](https://medium.com/@learnreact/container-components-c0e67432e005) (Medium article)
 - [Thinking in Redux (when all you’ve known is MVC)](https://hackernoon.com/thinking-in-redux-when-all-youve-known-is-mvc-c78a74d35133) (Medium article)
@@ -86,10 +85,10 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - [Break Down Isomorphic and Universal Boilerplate: React-Redux server rendering](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285) (Advance topic, Medium article)
 - [Collection of bunch of interesting React videos and related topic](https://www.youtube.com/playlist?list=PLkuiMQfg5DujODRnZGKokmwHZrBqqUCr1) (Youtube playlist)
 
-## Authors
+## 🎩 Author
 Atul Yadav - [GitHub](https://github.com/atulmy) &bull; [Twitter](https://twitter.com/atulmy)
 
-## License
+## 📜 License
 Copyright (c) 2016 Atul Yadav http://github.com/atulmy
 
 The MIT License (http://www.opensource.org/licenses/mit-license.php)
