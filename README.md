@@ -1,5 +1,5 @@
 # Node Express/MongoDB + React/Redux App - Zwitter
-A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React and Redux using **create-react-app** with separate **API** `(express+mongo)` and **Frontend** `(react+redux)` folders. Uses Google's Material Design UI (`material-ui` package).
+A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React and Redux using **create-react-app** with separate **API** `(express+mongo)` and **Frontend** `(react+redux)` folders. Uses Google's Material Design UI (`material-ui` package). <a href="https://node-express-react-redux-zwitter.demo.atulmy.com/" target="_blank">Demo ↗️</a>
 
 ## Features
 - [x] List all tweets
