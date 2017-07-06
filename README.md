@@ -9,7 +9,6 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - [x] Enable [CORS](https://enable-cors.org/index.html)
 - [x] [Demo](https://node-express-react-redux-zwitter.demo.atulmy.com/) on Digital Ocean
 - [x] Progressive Web App features (Offline first, Service worker, Application shell) using [sw-precache](https://github.com/GoogleChrome/sw-precache) and [create-react-pwa](https://github.com/jeffposnick/create-react-pwa)
-- [ ] Short tutorial on Medium
 
 ## ▶️ Running
 - Clone repo `git clone git@github.com:atulmy/node-express-react-redux-zwitter.git zwitter`
@@ -90,7 +89,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 Atul Yadav - [GitHub](https://github.com/atulmy) &bull; [Twitter](https://twitter.com/atulmy)
 
 ## 📜 License
-Copyright (c) 2016 Atul Yadav http://github.com/atulmy
+Copyright (c) 2017 Atul Yadav http://github.com/atulmy
 
 The MIT License (http://www.opensource.org/licenses/mit-license.php)
 
