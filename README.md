@@ -7,7 +7,7 @@ A basic clone of Twitter (Boilerplate App) using - Node, Express, MongoDB, React
 - [x] Post a tweet
 - [x] Login / Register
 - [x] Enable [CORS](https://enable-cors.org/index.html)
-- [x] Progressive Web App features (Offline first, Service worker, Application shell) using [sw-precache](https://github.com/GoogleChrome/sw-precache) and [create-react-pwa](https://github.com/jeffposnick/create-react-pwa)
+- [x] Progressive Web App features (Offline first, Service worker, Application shell)
 
 ## ▶️ Running
 - Clone repo `git clone git@github.com:atulmy/node-express-react-redux-zwitter.git zwitter`
