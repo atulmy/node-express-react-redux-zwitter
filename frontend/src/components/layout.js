@@ -42,7 +42,7 @@ class Layout extends Component {
                 >
                     <MenuItem onTouchTap={ this.handleDrawerToggle } containerElement={<Link to="/" />}>🏠 Home</MenuItem>
                     <MenuItem onTouchTap={ this.handleDrawerToggle } containerElement={<Link to="/about" />}>ℹ️ About</MenuItem>
-                    <MenuItem onTouchTap={ this.handleDrawerToggle }>👨‍💻 Zwitter by <a href="https://twitter.com/atulmy" target="_blank">@atulmy</a></MenuItem>
+                    <MenuItem onTouchTap={ this.handleDrawerToggle }><span role="img">👨‍💻</span> Zwitter by <a href="https://twitter.com/atulmy" target="_blank">@atulmy</a></MenuItem>
                 </Drawer>
 
                 { this.props.children }

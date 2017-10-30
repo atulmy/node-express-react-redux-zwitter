@@ -16,7 +16,7 @@ class TweetViewContainer extends Component {
     render() {
         return (
             <section>
-                <h2>💭 Tweet</h2>
+                <h2><span role="img">💭</span> Tweet</h2>
 
                 <br/>
 

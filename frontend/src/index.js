@@ -13,6 +13,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // App Imports
+import registerServiceWorker from './registerServiceWorker'
 import { setCurrentUser } from './actions/user';
 import rootReducer from './reducers/root';
 import App from './app';
@@ -48,3 +49,6 @@ ReactDOM.render(
 
     document.getElementById('root')
 );
+
+// Service Worker
+registerServiceWorker();
