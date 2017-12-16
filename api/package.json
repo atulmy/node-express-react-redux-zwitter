@@ -14,7 +14,7 @@
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
-    "moment": "^2.19.1",
-    "mongoose": "^4.12.5"
+    "moment": "2.19.4",
+    "mongoose": "4.13.7"
   }
 }
