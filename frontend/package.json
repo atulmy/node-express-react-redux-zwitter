@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.14",
+    "react-scripts": "1.1.1",
     "sw-precache": "^5.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "immutability-helper": "2.6.2",
+    "immutability-helper": "2.6.4",
     "jwt-decode": "^2.1.0",
     "lodash": "^4.17.3",
-    "material-ui": "^0.19.4",
-    "moment": "2.19.4",
+    "material-ui": "^0.20.0",
+    "moment": "2.20.1",
     "prop-types": "^15.5.10",
     "react": "16.2.0",
     "react-addons-css-transition-group": "^15.4.1",
