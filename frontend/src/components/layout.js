@@ -30,7 +30,7 @@ class Layout extends Component {
             <div>
                 <AppBar
                     title="🐣 Zwitter"
-                    onLeftIconButtonTouchTap={ this.handleDrawerToggle }
+                    onLeftIconButtonClick={ this.handleDrawerToggle }
                     iconElementRight={ isAuthenticated ? <UserButtonLogged /> : <UserButtonLogin /> }
                 />
 

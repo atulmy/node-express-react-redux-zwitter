@@ -92,7 +92,7 @@ class TweetAdd extends Component {
                     message="Tweet has been posted"
                     autoHideDuration={4000}
                     action="View Tweet"
-                    onActionTouchTap={ () => ( this.setState({ viewTweet: true }) ) }
+                    onActionClick={ () => ( this.setState({ viewTweet: true }) ) }
                 />
 
                 { this.state.viewTweet ? <Redirect to={ `/tweet/${ this.state.tweetId }` } /> : '' }
