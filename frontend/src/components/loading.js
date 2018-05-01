@@ -2,10 +2,10 @@
 import React from 'react'
 
 // UI Imports
-import CircularProgress from 'material-ui/CircularProgress';
+import CircularProgress from 'material-ui/CircularProgress'
 
 const Layout = () => (
-    <CircularProgress />
-);
+  <CircularProgress/>
+)
 
 export default Layout

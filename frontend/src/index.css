@@ -1,18 +1,18 @@
 /* demo css */
 * {
-    padding: 0px;
-    margin: 0px;
-    font-family: Roboto, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-family: Roboto, sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 section {
-    padding: 20px;
+  padding: 20px;
 }
 
 h1, h2 {
-    font-weight: normal;
+  font-weight: normal;
 }

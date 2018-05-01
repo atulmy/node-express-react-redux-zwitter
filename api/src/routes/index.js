@@ -1,24 +1,24 @@
 // src / routes / index.js
-'use strict';
+'use strict'
 
 // Imports
-const express = require('express');
+const express = require('express')
 
-let authMiddleware = require('./middlewares/auth');
+let authMiddleware = require('./middlewares/auth')
 
 // Common Routes
-let commonRoutes = express.Router();
+let commonRoutes = express.Router()
 
 // Root
 commonRoutes.get('/', authMiddleware, (request, response) => {
-    let responseData = {
-        success: false,
+  let responseData = {
+    success: false,
 
-        errors: {}
-    };
+    errors: {}
+  }
 
-    response.json(responseData);
-});
+  response.json(responseData)
+})
 
 // Export
-module.exports = commonRoutes;
+module.exports = commonRoutes

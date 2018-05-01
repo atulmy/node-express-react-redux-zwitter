@@ -1,69 +1,69 @@
 // Imports
-import jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode'
 
 // App Imports
-import config from '../config';
+import config from '../config'
 
-export const USER_CURRENT_SET = 'USER_CURRENT_SET';
+export const USER_CURRENT_SET = 'USER_CURRENT_SET'
 
-export function postLogin(credentials) {
-    return dispatch => {
-        return fetch(`${ config.url.api }user/login`, {
-            method: 'post',
+export function postLogin (credentials) {
+  return dispatch => {
+    return fetch(`${ config.url.api }user/login`, {
+      method: 'post',
 
-            body: JSON.stringify(credentials),
+      body: JSON.stringify(credentials),
 
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => {
-                if(response.ok) {
-                    return response.json();
-                }
-            })
-            .then(response => {
-                if(response.success) {
-                    const token = response.data.token;
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        }
+      })
+      .then(response => {
+        if (response.success) {
+          const token = response.data.token
 
-                    localStorage.setItem('token', token);
+          localStorage.setItem('token', token)
 
-                    dispatch(setCurrentUser(jwtDecode(token)));
-                }
+          dispatch(setCurrentUser(jwtDecode(token)))
+        }
 
-                return response;
-            });
-    }
+        return response
+      })
+  }
 }
 
-export function postRegister(credentials) {
-    return dispatch => {
-        return fetch(`${ config.url.api }user/register`, {
-            method: 'post',
+export function postRegister (credentials) {
+  return dispatch => {
+    return fetch(`${ config.url.api }user/register`, {
+      method: 'post',
 
-            body: JSON.stringify(credentials),
+      body: JSON.stringify(credentials),
 
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-    }
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+  }
 }
 
-export function setCurrentUser(user) {
-    return {
-        type: USER_CURRENT_SET,
-        user
-    };
+export function setCurrentUser (user) {
+  return {
+    type: USER_CURRENT_SET,
+    user
+  }
 }
 
-export function userLogout() {
-    return dispatch => {
-        localStorage.removeItem('token');
+export function userLogout () {
+  return dispatch => {
+    localStorage.removeItem('token')
 
-        dispatch(setCurrentUser({}));
+    dispatch(setCurrentUser({}))
 
-        return { success: true };
-    }
+    return {success: true}
+  }
 }

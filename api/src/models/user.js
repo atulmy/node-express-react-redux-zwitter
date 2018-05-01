@@ -1,15 +1,15 @@
 // src / models / user.js
-'use strict';
+'use strict'
 
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 // User Collection
 let UserSchema = mongoose.Schema({
-    username: String,
-    password: String,
-    createdAt: Date
-});
+  username: String,
+  password: String,
+  createdAt: Date
+})
 
-let User = mongoose.model('users', UserSchema);
+let User = mongoose.model('users', UserSchema)
 
-module.exports = User;
+module.exports = User
