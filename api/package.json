@@ -15,6 +15,6 @@
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
     "moment": "2.22.2",
-    "mongoose": "5.2.6"
+    "mongoose": "5.2.12"
   }
 }
