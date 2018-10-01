@@ -18,7 +18,7 @@ let apiServer = express()
 apiServer.set('APP_SECRET', config.secret)
 
 // MongoDB (mongoose)
-mongoose.connect(config.databaseUrl)
+mongoose.connect(config.databaseUrl, { useNewUrlParser: true })
 let db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 
