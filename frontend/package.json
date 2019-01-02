@@ -3,20 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "2.1.1",
+    "react-scripts": "2.1.2",
     "sw-precache": "^5.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "immutability-helper": "2.8.1",
+    "immutability-helper": "2.9.0",
     "jwt-decode": "^2.1.0",
     "lodash": "^4.17.3",
     "material-ui": "^0.20.0",
-    "moment": "2.22.2",
+    "moment": "2.23.0",
     "prop-types": "^15.5.10",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
-    "react-redux": "^5.0.1",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-redux": "^6.0.0",
     "react-router-dom": "^4.1.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.1.0"
