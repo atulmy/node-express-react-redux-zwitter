@@ -112,7 +112,7 @@ class UserRegister extends Component {
           <br/>
           <br/>
 
-          <RaisedButton label="Submit" type="submit" backgroundColor={blue500} labelColor="white"/>
+          <RaisedButton label="Submit" type="submit" backgroundColor={blue500} />
 
           <Link to="/user/login"><FlatButton label="Login"/></Link>
         </form>

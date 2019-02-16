@@ -33,7 +33,7 @@ class UserButtonLogged extends Component {
     return (
       <IconMenu
         iconButtonElement={
-          <IconButton><MoreVertIcon color="white"/></IconButton>
+          <IconButton><MoreVertIcon /></IconButton>
         }
         targetOrigin={{horizontal: 'right', vertical: 'top'}}
         anchorOrigin={{horizontal: 'right', vertical: 'top'}}
