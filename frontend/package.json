@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "2.1.5",
+    "react-scripts": "2.1.8",
     "sw-precache": "^5.1.1"
   },
   "dependencies": {
@@ -14,8 +14,8 @@
     "material-ui": "^0.20.0",
     "moment": "2.24.0",
     "prop-types": "^15.5.10",
-    "react": "16.8.2",
-    "react-dom": "16.8.2",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.1.1",
     "redux": "^4.0.0",
