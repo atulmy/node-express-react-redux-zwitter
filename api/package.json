@@ -7,14 +7,14 @@
     "start": "nodemon ./src"
   },
   "dependencies": {
-    "bcrypt": "^3.0.0",
-    "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
-    "cors": "^2.8.4",
-    "express": "^4.16.2",
-    "jsonwebtoken": "^8.1.0",
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "4.17.11",
     "moment": "2.24.0",
-    "mongoose": "5.4.17"
+    "mongoose": "5.5.0"
   }
 }
