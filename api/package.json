@@ -7,7 +7,7 @@
     "start": "nodemon ./src"
   },
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^3.0.7",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
@@ -15,9 +15,9 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "4.17.15",
     "moment": "2.24.0",
-    "mongoose": "5.7.1"
+    "mongoose": "5.7.12"
   },
   "devDependencies": {
-    "nodemon": "^1.19.2"
+    "nodemon": "^2.0.0"
   }
 }
