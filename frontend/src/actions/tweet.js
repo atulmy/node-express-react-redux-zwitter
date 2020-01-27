@@ -15,12 +15,10 @@ export function fetchTweets () {
     return fetch(`${ config.url.api }tweets`).then(function (response) {
       if (response.ok) {
         response.json().then(function (response) {
-          if (response.data.length > 0) {
-            dispatch({
-              type: SET_TWEETS,
-              tweets: response.data
-            })
-          }
+          dispatch({
+            type: SET_TWEETS,
+            tweets: response.data
+          })
         })
       } else {
         console.log('Looks like the response wasn\'t perfect, got status', response.status)

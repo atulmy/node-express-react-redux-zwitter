@@ -15,9 +15,9 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "4.17.15",
     "moment": "2.24.0",
-    "mongoose": "5.7.12"
+    "mongoose": "5.8.9"
   },
   "devDependencies": {
-    "nodemon": "^2.0.0"
+    "nodemon": "^2.0.2"
   }
 }

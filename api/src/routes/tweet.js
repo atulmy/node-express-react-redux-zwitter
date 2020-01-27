@@ -17,7 +17,7 @@ let tweetRoutes = express.Router()
 tweetRoutes.get('/tweets', authMiddleware, (request, response) => {
   let responseData = {
     success: false,
-    data: {},
+    data: [],
     errors: []
   }
 
